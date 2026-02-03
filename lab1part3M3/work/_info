@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_pro/17.1
+vmin_max_finder_part3_M3
+!s110 1769903656
+!i10b 1
+!s100 ajK8=AM]Ej1TOO^`Ri9zX3
+I1WA:8NH51_>SbddUKJm>L3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/louie/Desktop/EE457/lab1part3M3
+w1769903627
+8C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v
+FC:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v
+L0 38
+Z2 OV;L;10.5c;63
+r1
+!s85 0
+31
+!s108 1769903656.000000
+!s107 C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+nmin_max_finder_part3_@m3
+vmin_max_finder_part3_M3_tb
+!s110 1769904582
+!i10b 1
+!s100 XhU_;F<RlIN?U`>]kfVRj1
+I8nR8ogeOd=fBih7V6GRVP1
+R0
+R1
+w1737256829
+8C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v
+FC:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v
+L0 39
+R2
+r1
+!s85 0
+31
+!s108 1769904582.000000
+!s107 C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v|
+!i113 1
+R3
+R4
+nmin_max_finder_part3_@m3_tb

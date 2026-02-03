@@ -1,0 +1,13 @@
+C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v {0 {vlog -work work -stats=none C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module min_max_finder_part3_M3
+** Error: C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3.v(100): (vlog-2730) Undefined variable: 'F'.
+
+} {4.0 5.0} {}} C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v {1 {vlog -work work -stats=none C:/Users/louie/Desktop/EE457/lab1part3M3/min_max_finder_part3_M3_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module min_max_finder_part3_M3_tb
+
+Top level modules:
+	min_max_finder_part3_M3_tb
+
+} {} {}}

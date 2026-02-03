@@ -93,42 +93,49 @@ always @(posedge Clk, posedge Reset)
 		           state <= CMn; // Transit unconditionally to the CMn state         
  	          end
 	        
-	        CMn :
-	          begin 
-	             // RTL operations in the Data Path   		                  
-				    if (M[I] < Min) Min <= M[I];
-					if (F = 1 || M[I] <= Min) I <= I + 1; 
-					if (M[I] > Min) F <= 1;  
-					else F <= 0; 
-	
+			CMn : 
+				begin
+					// RTL operations in the Data Path
+					if (M[I] < Min) Min <= M[I];
+					if (Flag || M[I] <= Min) I <= I + 1;
+					if (Flag) Flag <= 0;
 					
-					
-					
-				 // state transitions in the control unit    
-					if ((M[I] <= Min) && (I != 15)) state <= CMn;
-					if ((M[I] <= Min) && (I != 15)) state <= DONE;  
-					else state <= CMx; 
-				
-					
-			  end
-			  
-			  
-	        CMx :
-	          begin 
-	             // RTL operations in the Data Path   		                  
-					if (M[I] > Max) Max <= M[I];
-					if (F = 1 || M[I] >= Max) I <= I + 1; 
-					if (M[I] > Max) F <= 1;  
-					else F <= 0; 
-					
-				 // state transitions in the control unit    
-					if ((M[I] >= Max) && (I != 15)) state <= CMx;
-					if ((M[I] >= Max) && (I != 15)) state <= DONE;  
-					else state <= Cnx; 
-					
-					
-			  end
+					// state transitions in the control unit
+					if (Flag) begin
+						if (I == 4'd15) state <= DONE;
+						else state <= CMn;
+					end
+					else if (M[I] <= Min) begin
+						if (I == 4'd15) state <= DONE;
+						else state <= CMn;
+					end
+					else begin
+						Flag <= 1;
+						state <= CMx;
+					end
+				end
 
+			CMx : 
+				begin
+					// RTL operations in the Data Path
+					if (M[I] > Max) Max <= M[I];
+					if (Flag || M[I] >= Max) I <= I + 1;
+					if (Flag) Flag <= 0;
+					
+					// state transitions in the control unit
+					if (Flag) begin
+						if (I == 4'd15) state <= DONE;
+						else state <= CMx;
+					end
+					else if (M[I] >= Max) begin
+						if (I == 4'd15) state <= DONE;
+						else state <= CMx;
+					end
+					else begin
+						Flag <= 1;
+						state <= CMn;
+					end
+				end
 
 	        DONE	:
 	          begin  
